@@ -22,6 +22,16 @@ flowchart LR
 - `infra/aws`: AWS を採用する必要が出た場合の代替案です。初期構成では apply しません。
 - `.github/workflows`: テストと Terraform の書式検査です。
 
+## 用途別のおすすめ構成
+
+| 構成 | 向いている用途 | 最初に使う Terraform |
+|---|---|---|
+| Cloudflare Workers + D1 | コンテンツ、軽い API、少人数向けの SaaS | `infra/cloudflare` |
+| Firebase Hosting + Auth + Firestore | ログイン、リアルタイム更新、モバイルも作るプロトタイプ | `infra/firebase` |
+| AWS Serverless | AWS の他サービス連携や IAM 分離が必要な段階 | `infra/aws` |
+
+構成の選定理由と、追加する条件は [docs/recommended-stacks.md](docs/recommended-stacks.md) にまとめています。最初から複数の構成を同時に apply せず、アプリの性質に合う一つを選びます。
+
 ## まず GitHub リポジトリを作る
 
 Bootstrap は、このリポジトリを初回作成するときだけローカルで実行します。トークンをファイルへ保存しません。
