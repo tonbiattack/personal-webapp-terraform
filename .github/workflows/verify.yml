@@ -18,5 +18,7 @@ jobs:
           node-version: 22
       - run: npm test
         working-directory: apps/api
+      - run: npm test
+        working-directory: apps/worker
       - uses: hashicorp/setup-terraform@v3
       - run: terraform fmt -check -recursive

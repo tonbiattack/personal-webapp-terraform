@@ -1,0 +1,9 @@
+{
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "personal-webapp",
+      "database_id": "Terraform の d1_database_id 出力値に置き換える"
+    }
+  ]
+}
