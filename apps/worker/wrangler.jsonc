@@ -1,0 +1,8 @@
+{
+  "name": "personal-webapp",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-20",
+  "assets": {
+    "directory": "../web"
+  }
+}
